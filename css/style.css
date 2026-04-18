@@ -22,12 +22,12 @@
   --color-card-bg:     #3b2d52;   /* Card/panel backgrounds */
   --color-table-stripe:#352748;   /* Alternating table row */
   --color-modal-bg:    #231838;   /* Modal background */
-  --tile-image:        'images/bg-dark.jpg';
+  --tile-image:        url('images/bg-dark.jpg');
   --toggle-icon:       "\f5a8";   /* Bootstrap icon: sun */
 }
 
 [data-theme="light"] {
-  --color-bg:          #f5f5f0;   /* Off-white page background */
+  --color-bg:          #cddbe0;   /* Off-white page background */
   --color-navbar:      #1a2e4a;   /* Deep blue navbar/footer */
   --color-footer:      #1a2e4a;
   --color-text:        #1a2233;   /* Black-blue text */
