@@ -15,30 +15,30 @@
   --color-navbar:      #1a1228;   /* Deep purple-black navbar/footer */
   --color-footer:      #1a1228;
   --color-text:        #f0e6ff;   /* Soft white text */
-  --color-text-muted:  #b89ec9;   /* Muted secondary text */
+  --color-text-muted:  #bea7cd;   /* Muted secondary text */
   --color-accent:      #ff6ec7;   /* Pink accent */
   --color-accent-hover:#ff9dda;   /* Lighter pink on hover */
   --color-border:      #4a3560;   /* Subtle border color */
   --color-card-bg:     #3b2d52;   /* Card/panel backgrounds */
   --color-table-stripe:#352748;   /* Alternating table row */
   --color-modal-bg:    #231838;   /* Modal background */
-  --tile-image:        url('images/bg-dark.jpg');
+  --tile-image:        url('.\\images\\bg-dark.jpg');
   --toggle-icon:       "\f5a8";   /* Bootstrap icon: sun */
 }
 
 [data-theme="light"] {
-  --color-bg:          #cddbe0;   /* Off-white page background */
-  --color-navbar:      #1a2e4a;   /* Deep blue navbar/footer */
-  --color-footer:      #1a2e4a;
+  --color-bg:          #ececec;   /* Off-white page background */
+  --color-navbar:      #131D30;   /* Deep blue navbar/footer */
+  --color-footer:      #131D30;
   --color-text:        #1a2233;   /* Black-blue text */
   --color-text-muted:  #4a6080;   /* Muted secondary text */
-  --color-accent:      #2b6cb0;   /* Deep blue accent */
-  --color-accent-hover:#1a4f8a;   /* Darker blue on hover */
-  --color-border:      #c5d5e8;   /* Subtle border color */
+  --color-accent:      #56B6E6;   /* Deep blue accent */
+  --color-accent-hover:#A8B1DC;   /* Darker blue on hover */
+  --color-border:      #a6bedb;   /* Subtle border color */
   --color-card-bg:     #e8eef5;   /* Card/panel backgrounds */
   --color-table-stripe:#dde6f0;   /* Alternating table row */
   --color-modal-bg:    #e0e8f2;   /* Modal background */
-  --tile-image:        url('images/bg-light.jpg');
+  --tile-image:        url('images/bg-light.jpg'); 
   --toggle-icon:       "\f497";   /* Bootstrap icon: moon */
 }
 
@@ -120,13 +120,12 @@ h1, h2, h3, h4, h5, h6 {
 .side-border {
   flex: 0 0 120px;
   width: 120px;
-  background-image: 'images/bg-dark.jpg';
+  background-image: var(--tile-image);
   background-repeat: repeat;
   background-size: 120px auto;
   /* Subtle overlay tint for theme blending */
   position: relative;
   overflow: hidden;
-  color: red;
 }
 
 /* Hide side borders on smaller screens */
