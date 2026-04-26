@@ -1,9 +1,0 @@
-{
-  "EntryName": "Example Entry",
-  "IconPath": "content/gallery/entry-example/icon.png",
-  "ImagePath": "content/gallery/entry-example/image_HD.png",
-  "External": [
-    { "label": "ArtStation", "url": "https://www.artstation.com" },
-    { "label": "DeviantArt",  "url": "https://www.deviantart.com" }
-  ]
-}
