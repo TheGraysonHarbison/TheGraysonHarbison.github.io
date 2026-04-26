@@ -1,0 +1,79 @@
+# .github/workflows/generate-manifests.yml
+#
+# Generate Index Files
+# Runs on every push to main. Scans each content section directory,
+# finds all valid entries (folders containing meta.json), and writes
+# an index.json listing them. This lets the frontend scripts
+# discover entries without relying on directory crawling, which
+# GitHub Pages does not support.
+#
+# Output files:
+#   content/gallery/index.json
+#   content/blogs/index.json
+#   content/projects/index.json
+
+name: Generate Manifests
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**'          # Only re-run when content actually changes
+
+  workflow_dispatch:           # Allow manual trigger from the Actions tab
+
+jobs:
+  build-manifests:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write          # Needed to push the manifest files back
+
+    steps:
+
+      # 1. Check out the repo
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Run the manifest generation script
+      - name: Generate index.json for each content section
+        run: |
+          python3 - <<'EOF'
+          import os, json
+
+          # Directories to scan. Add new sections here if needed.
+          SECTIONS = [
+            "content/gallery",
+          ]
+
+          for section in SECTIONS:
+            if not os.path.isdir(section):
+              print(f"[skip] {section} does not exist")
+              continue
+
+            entries = []
+            for name in sorted(os.listdir(section)):
+              entry_path = os.path.join(section, name)
+              meta_path  = os.path.join(entry_path, "meta.json")
+              if os.path.isdir(entry_path) and os.path.isfile(meta_path):
+                entries.append(name)
+
+            index = {"entries": entries}
+            index_path = os.path.join(section, "index.json")
+
+            with open(index_path, "w") as f:
+              json.dump(index, f, indent=2)
+
+            print(f"[ok] {index_path} — {len(entries)} entries: {entries}")
+
+          EOF
+
+      # 3. Commit and push if anything changed
+      - name: Commit updated indexes
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/*/index.json
+          # Only commit if there are staged changes
+          git diff --cached --quiet || git commit -m "chore: regenerate content indexes [skip ci]"
+          git push
