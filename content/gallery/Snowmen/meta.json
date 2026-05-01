@@ -1,0 +1,13 @@
+{
+	"title" : "Ancient Pokeball",
+	"uploadDate" : "2024-02-23T08:30:00Z",
+	"iconPath" : "icon.png",
+	"description" : "desc.txt",
+	"content" : [
+		{"imgPath" : "img/SnowmanHD.gif", "title" : "HD GIF"},
+		{"imgPath" : "img/SnowmanStill_HD.png", "title" : "Still Render"}
+	],
+	"links" : [
+		{"link" : "https://www.behance.net/gallery/192274157/Snowy-Night", "title" : "behance"} 
+	]
+}

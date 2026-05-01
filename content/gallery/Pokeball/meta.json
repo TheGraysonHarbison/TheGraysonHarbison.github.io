@@ -1,0 +1,13 @@
+{
+	"title" : "Ancient Pokeball",
+	"uploadDate" : "2022-02-05T08:30:00Z",
+	"iconPath" : "icon.png",
+	"description" : "desc.txt",
+	"content" : [
+		{"imgPath" : "img/PokeBall_HD.png", "title" : "HD Render"},
+		{"imgPath" : "img/PokeBall_4K.png", "title" : "4K Render"}
+	],
+	"links" : [
+		{"link" : "https://www.behance.net/gallery/193821073/Ancient-Pokeball", "title" : "behance"} 
+	]
+}

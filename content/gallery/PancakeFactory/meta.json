@@ -1,0 +1,14 @@
+{
+	"title" : "Pancake Factory",
+	"uploadDate" : "2023-02-01T08:30:00Z",
+	"iconPath" : "icon.png",
+	"description" : "desc.txt",
+	"content" : [
+		{"imgPath" : "img/PancakeHD.gif", "title" : "HD GIF"},
+		{"imgPath" : "img/PancakeStill_HD.png", "title" : "Still Render"}
+	],
+	"links" : [
+		{"link" : "https://www.behance.net/gallery/193822483/Pancake-Factory", "title" : "behance"},
+		{"link" : "https://www.youtube.com/shorts/XP6SnEWiE5U", "title" : "youtube"} 
+	]
+}

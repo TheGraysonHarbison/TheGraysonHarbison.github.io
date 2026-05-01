@@ -1,3 +1,14 @@
 {
-    
+	"title" : "Pickle Jesus",
+	"uploadDate" : "2024-06-07T08:30:00Z",
+	"iconPath" : "PickleJesus-SD.png",
+	"description" : "desc.txt",
+	"content" : [
+		{"imgPath" : "img/PickleJesus-HD.png", "title" : "HD Render"},
+		{"imgPath" : "img/PickleJesus_Non-Render-HD.png", "title" : "BTS Shot"},
+		{"imgPath" : "img/PickleJesus-Photoshoot-HD.png", "title" : "Pickle Solo"}
+	],
+	"links" : [
+		{"link" : "https://www.behance.net/gallery/200678283/Pickle-Jesus", "title" : "behance"}
+	]
 }
